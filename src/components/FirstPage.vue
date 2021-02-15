@@ -3,10 +3,16 @@
     <div class = "first-container">
         <div><p>Lets raid who unfollows you!</p></div>
         <input type="username" class="form-control" id="inputusername" placeholder="@username">
-        <button type="button" class="btn btn-dark">Go</button>
+        <button type="button" class="btn btn-dark" @click="ischange">Go</button>
     </div>
 </template>
-
+<script>
+export default {
+    props:{
+        ischange:Function
+    }
+}
+</script>
 <style scoped>
 .first-container{
     
@@ -30,12 +36,13 @@ input{
      margin:25px;
      margin-bottom:10px
 }
-input:focus, textarea:focus, select:focus{
-        outline: none;
-    }
+
 button{
     
    font-size: 9px;
-    border-radius: 20px;
+   border-radius: 20px;
+}
+.bottom:hover{
+    background-color: grey;
 }
 </style>
