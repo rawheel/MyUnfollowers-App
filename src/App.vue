@@ -1,10 +1,14 @@
 <template>
   <div id="app">
     <div>
-      <nav class="navbar navbar-dark bg-dark" style="width:100%">
-        <a class="nav-link" href="https://github.com/rawheel" target="_blank" style="color:white;">Home </a>
+      <nav class="navbar navbar-dark bg-dark" style="width:100%;margin:0;padding:0">
+        <button class="nav-link" @click="home" style="color:white;background-color:#343A40;border:none">Home </button>
       </nav>
     </div>
+    <div class="question-box-container">
+  <b-jumbotron>
+   
+
     <div class="main-container">
     <div class="name-head">
       <h1>MyUnfollowers</h1>
@@ -12,8 +16,9 @@
     </div>
     <div class="jumbotron">
       <div class = "github-img">
-          <img v-if="gitimg" id="github" :src="avatar">
+          <img id="github" :src="avatar">
       </div>
+      <h2><a :href="gitURL" style="color:#343A40" target="_blank">{{ gitUsername }}</a></h2>
       <div class="hr-container">
         <hr>
       </div>
@@ -21,15 +26,22 @@
 
           <div v-if="isFirst">
             <FirstPage
-            :ischange="ischange"
+            :changePagetofirst="getApi"
             />
           </div>
 
-          <div v-if="isMain">
+          <div v-else-if="isMain">
             <MainPage
             :avatarchange="avatarchange"
+            :apiData="apiData"
 
             />
+          </div>
+          <div v-else>
+            <Registered
+            :registeredMessage="registeredMessage"
+            />
+
           </div>
 
               
@@ -37,6 +49,8 @@
     </div>
     
   </div>
+    </b-jumbotron>
+    </div>
     
   </div>
 </template>
@@ -44,37 +58,116 @@
 <script>
 import FirstPage from './components/FirstPage.vue'
 import MainPage from './components/MainPage.vue'
-
+import Registered from './components/Registered.vue'
 export default {
-  name: 'App',
+  name: 'MyUnfollowers',
   components: {
     FirstPage,
-    MainPage
+    MainPage,
+    Registered
   },
   
   data(){
     return {
+    gitUsername:'',
+    gitURL:'',
     isFirst: true,
     isMain:false,
-    gitimg:true,
+    registeredMessage:'',
+    apiData:{},
+    newuser:false,
     avatar:"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
-    imggg:"https://avatars.githubusercontent.com/u/47301347?v=4"
+    
     }
   },
+  computed:{
+
+    //this.getApi()
+    
+  },
   methods:{
-    ischange(){
-      this.isFirst = false
-      this.isMain =true
+
+    getApi(username){
+     
+/////////////////////////////////////////////////////////////////////
+     //calling API
+      this.$api.myunfollowersapi.githubAPI(username)
+    .then((response) => {
+      this.apiData = response.data
+/////////////////////////////////////////////////////////////////////
+   
+
+/////////////////////////////////////////////////////////////////////
+      // if the user is new so this statement runs
+      if ('message' in this.apiData){
+          this.newuser=true
+          this.registeredMessage = `Hey ${username}! your username & followers have been saved for latter use!`
+          this.gitUsername = username;
+          this.gitURL =`https://github.com/${username}`
+          console.log("yeah new user",this.apiData.message)
+          }
+////////////////////////////////////////////////////////////////////
+      else{
+        this.gitUsername = username;
+        this.gitURL =`https://github.com/${username}`
+      
+      }
+
+      console.log(this.apiData)
+      this.changePage()
+          
+      })
+
+///////////////////////////////////////////////////////////////////
+      // IF THERE IS BAD REQUEST 404 or Error
+      .catch(error => {
+          // error.response can be null
+          if (error.response && error.response.status === 400) {
+            this.newuser=true
+            this.registeredMessage = "Max Retries exceeded with URL or Invalid Username! take a break man..."
+            this.changePage()
+            console.log('errorrr');
+              }
+      });
+///////////////////////////////////////////////////////////////////
+          
     },
+//This method used to everything set back as it was and bring user to home
+    home(){
+      this.avatarchange("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png")
+      this.isFirst=true;
+      this.newuser =false;
+      this.isMain =false
+    },
+
+// This method used to changing pages
+   changePage(){
+      this.isFirst = false
+      if (!this.newuser){
+        this.isMain =true
+      }
+    },
+
     avatarchange(name){
       this.avatar=name
     }
-  }
+  } 
   }
 
 </script>
 
 <style scoped>
+h2{
+  margin-top:2px;
+  color:#343A40;
+  font-style:italic;
+  font-size:22px;
+ 
+  
+}
+.name-head{
+  margin-top:2.5%;
+}
 *{
   color:#707070,
   
@@ -104,8 +197,8 @@ export default {
   width:1200px;
   height:auto;
   padding: 0;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .github-img img{

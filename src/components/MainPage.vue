@@ -1,25 +1,25 @@
 <template>
 <div class = "main-div" >
     
-      <h2>@rawheel</h2>
+      
     
     <div class="row">
     <div class="column">
         <p>TOTAL FOLLOWERS</p>
-        <h1>64</h1>
+        <h1>{{ this.apiData.totalfollowers }}</h1>
     </div>
     <div class="column">
         
        <div>
-            <b-table table :items="items" style="font-size:14px; "></b-table>
+            <b-table table :items="finalFollowers" style="font-size:11px;"></b-table>
         </div>
     </div>
 
     <div class="column">
         <p>TOTAL NEWFOLLOWERS</p>
-        <h1>4</h1>
+        <h1>{{ this.apiData.totalnewfollowers }}</h1>
         <p>TOTAL UNFOLLOWERS</p>
-        <h1>6</h1>
+        <h1>{{ this.apiData.totalunfollowers }}</h1>
     </div>
     </div>
   </div>
@@ -28,25 +28,47 @@
 <script>
 export default {
     props:{
-        ischangeGitimg:Function,
+        apiData:Object,
         avatarchange: Function
     },
     data() {
       return {
         
-        
+        finalFollowers:[],
         items: [
-          { NewFollowers: 'waleed01', UnFollowers: 'osama12'  },
-          { NewFollowers: 'shahzaibawan12' ,UnFollowers: 'osama12'},
-          { NewFollowers: 'iqra45' ,UnFollowers: 'rawheel' },
-          { NewFollowers: 'wajahtkarim4' },
+          { Newfollowers: 'waleed01', Unfollowers: 'osama12'  },
+          { Newfollowers: 'shahzaibawan12' ,Unfollowers: 'osama12'},
+          { Newfollowers: 'iqra45' ,Unfollowers: 'rawheel' },
+          { Newfollowers: 'wajahtkarim4' },
           
         ]
       }
 
     },
+    methods:{
+      structuredFollowers(){
+        if(this.apiData.totalnewfollowers==0){
+          console.log("22",this.apiData.totalnewfollowers ,this.apiData.totalunfollowers);
+          this.apiData.newfollowers=[];
+        }
+
+        if(this.apiData.totalunfollowers == 0){
+          console.log("33",this.apiData.totalnewfollowers, this.apiData.totalunfollowers);
+          this.apiData.unfollowers=[];
+        }
+        var maxLength = Math.max(this.apiData.totalnewfollowers,this.apiData.totalunfollowers)
+        for (var i = 0; i < maxLength; i++) {
+
+            this.finalFollowers.push({Newfollowers:this.apiData.newfollowers[i],Unfollowers:this.apiData.unfollowers[i]})
+            console.log({Newfollowers:this.apiData.newfollowers[i],Unfollowers:this.apiData.unfollowers[i]});
+            //Do something
+        }
+      }
+    },
     mounted(){
-      this.avatarchange("https://avatars.githubusercontent.com/u/47301347?v=4")
+      console.log(this.apiData.avatar_url,this.apiData.totalfollowers)
+      this.avatarchange(this.apiData.avatar_url)
+      this.structuredFollowers()
     }
     
 }
@@ -54,15 +76,10 @@ export default {
 
 <style scoped>
 
-.main-div h1,p,h2{
-  padding:0;
-  margin:0;
-  color:blue,
+h1,p{
+  color:#707070;
 }
-h2{
-  
-  margin-bottom:60px;
-}
+
 .column {
   float: left;
   width: 32%;
