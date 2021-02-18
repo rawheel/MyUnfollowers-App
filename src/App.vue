@@ -6,19 +6,18 @@
       </nav>
     </div>
     <div class="question-box-container">
-  <b-jumbotron>
-   
-
-    <div class="main-container">
-    <div class="name-head">
-      <h1>MyUnfollowers</h1>
-      <a href="https://github.com/rawheel" style="color:black;" target="_blank">by Raheel Siddiqui</a>
+    <div class="name-head" >
+      <h1 style="font-size:18px">MyUnfollowers</h1>
+      <a href="https://github.com/rawheel" style="color:black;font-size:9px" target="_blank">by Raheel Siddiqui</a>
+    
+    
     </div>
-    <div class="jumbotron">
+    <b-jumbotron>
+    
       <div class = "github-img">
           <img id="github" :src="avatar">
       </div>
-      <h2><a :href="gitURL" style="color:#343A40" target="_blank">{{ gitUsername }}</a></h2>
+      <h4><a :href="gitURL" style="color:#343A40;font-size:14px" target="_blank">{{ gitUsername }}</a></h4>
       <div class="hr-container">
         <hr>
       </div>
@@ -45,10 +44,10 @@
           </div>
 
               
-        </div>
+      
     </div>
     
-  </div>
+ 
     </b-jumbotron>
     </div>
     
@@ -104,7 +103,7 @@ export default {
           this.registeredMessage = `Hey ${username}! your username & followers have been saved for latter use!`
           this.gitUsername = username;
           this.gitURL =`https://github.com/${username}`
-          console.log("yeah new user",this.apiData.message)
+          
           }
 ////////////////////////////////////////////////////////////////////
       else{
@@ -113,7 +112,7 @@ export default {
       
       }
 
-      console.log(this.apiData)
+      
       this.changePage()
           
       })
@@ -126,7 +125,7 @@ export default {
             this.newuser=true
             this.registeredMessage = "Max Retries exceeded with URL or Invalid Username! take a break man..."
             this.changePage()
-            console.log('errorrr');
+            
               }
       });
 ///////////////////////////////////////////////////////////////////
@@ -134,6 +133,8 @@ export default {
     },
 //This method used to everything set back as it was and bring user to home
     home(){
+      this.gitUsername='',
+      this.gitURL='',
       this.avatarchange("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png")
       this.isFirst=true;
       this.newuser =false;
@@ -146,6 +147,7 @@ export default {
       if (!this.newuser){
         this.isMain =true
       }
+      
     },
 
     avatarchange(name){
@@ -157,7 +159,14 @@ export default {
 </script>
 
 <style scoped>
-h2{
+.question-box-container{
+  display: inline-block;
+  text-align: center;
+  margin-left:25%;
+  margin-right: 25%;
+  
+}
+h4{
   margin-top:2px;
   color:#343A40;
   font-style:italic;
@@ -166,6 +175,7 @@ h2{
   
 }
 .name-head{
+  
   margin-top:2.5%;
 }
 *{
@@ -211,7 +221,7 @@ h2{
  
     
     
-    width:12%;
+    width:20%;
     height:auto;
     
 }

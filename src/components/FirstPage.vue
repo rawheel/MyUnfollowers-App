@@ -3,7 +3,7 @@
     <div class = "first-container">
         <div><p>Lets raid who unfollows you!</p></div>
         <input v-model="getusername" type="username" class="form-control" id="inputusername" placeholder="@username">
-        <button type="button" class="btn btn-dark" @click="emitUsername">Go</button>
+        <button type="button" class="btn btn-dark" @click="emitUsername" @keyup.enter="emitUsername">Go</button>
     </div>
 </template>
 <script>
@@ -14,14 +14,13 @@ export default {
         }
     },
     props:{
-        //changePagetofirst:Function
+      
         changePagetofirst: Function
     },
     methods:{
         emitUsername(){
             
-            console.log(this.getusername,"giot")
-          this.changePagetofirst(this.getusername)
+            this.changePagetofirst(this.getusername)
         }
     }
 

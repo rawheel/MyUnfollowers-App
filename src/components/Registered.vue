@@ -9,11 +9,9 @@ export default {
 }
 </script>
 
-
-
-
 <style scoped>
 p{
+    font-size:10px;
     font-style: italic;
 }
 </style>
