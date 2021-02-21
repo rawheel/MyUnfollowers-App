@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class = 'bg-gray-300 w-full h-screen'>
     <div>
       <nav class="navbar navbar-dark bg-dark" style="width:100%;margin:0;padding:0">
         <button class="nav-link" @click="home" style="color:white;background-color:#343A40;border:none">Home </button>
