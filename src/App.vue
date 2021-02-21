@@ -1,24 +1,27 @@
 <template>
-  <div id="app">
+  <div id="app" class = 'bg-white w-full h-screen font-sans md:font-serif md:justify-self-center'>
+    
     <div>
-      <nav class="navbar navbar-dark bg-dark" style="width:100%;margin:0;padding:0">
-        <button class="nav-link" @click="home" style="color:white;background-color:#343A40;border:none">Home </button>
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <button class="nav-link" @click="home" style="color:white;border:none">Home </button>
       </nav>
     </div>
+
+    <div class="grid justify-items-center">
     <div class="question-box-container">
     <div class="name-head" >
-      <h1 style="font-size:18px">MyUnfollowers</h1>
-      <a href="https://github.com/rawheel" style="color:black;font-size:9px" target="_blank">by Raheel Siddiqui</a>
+      <h1 style="font-size:2rem">MyUnfollowers</h1>
+      <p><a href="https://github.com/rawheel" style="color:black;font-size:0.7rem" target="_blank">by Raheel Siddiqui</a></p>
     
     
     </div>
-    <b-jumbotron>
+    <div class="bg-gray-100 shadow-md rounded md:rounded-full pt-6 pb-8 mb-4 flex flex-col my-2">
     
       <div class = "github-img">
           <img id="github" :src="avatar">
       </div>
-      <h4><a :href="gitURL" style="color:#343A40;font-size:14px" target="_blank">{{ gitUsername }}</a></h4>
-      <div class="hr-container">
+      <h4><a :href="gitURL" style="color:#343A40;font-size:1rem" target="_blank">{{ gitUsername }}</a></h4>
+      <div style="padding-right:30px;padding-left:30px">
         <hr>
       </div>
         <div class = "pages" >
@@ -48,9 +51,10 @@
     </div>
     
  
-    </b-jumbotron>
     </div>
-    
+    </div>
+  
+    </div>
   </div>
 </template>
 
@@ -162,17 +166,12 @@ export default {
 .question-box-container{
   display: inline-block;
   text-align: center;
-  margin-left:25%;
-  margin-right: 25%;
+  
   
 }
 h4{
   margin-top:2px;
-  color:#343A40;
   font-style:italic;
-  font-size:22px;
- 
-  
 }
 .name-head{
   
@@ -186,53 +185,17 @@ h4{
   font-family: 'Segoe UI';
 }
 
-.jumbotron{
-  padding:0;
-  padding-bottom: 2.5%;
-  margin-top:3%;
-  margin-left:18%;
-  margin-right: 18%;
-  border-radius:40px;
-  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.161));
-  height:auto;
-  background-color: rgba(245,245,245,1);
-
-}
-
-
-.main-container {
-
-  display: inline-block;
-  text-align: center;
-  width:1200px;
-  height:auto;
-  padding: 0;
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
 .github-img img{
 
     display: inline-block;
   text-align: center;
   margin-top:2%;
-  border-radius:50%;
-
- 
-    
-    
-    width:20%;
-    height:auto;
+  border-radius:50%;    
+  width:15%;
+  height:auto;
     
 }
-.hr-container{
-  padding: 0;
-  margin: 0;
-  display: inline-block;
-  text-align: center;
-  width:80%;
 
-}
 .pages{
   margin-top:5%
 }
