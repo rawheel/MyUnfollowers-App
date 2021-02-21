@@ -1,6 +1,6 @@
 <img src="https://github.com/rawheel/My-Unfollowers-Vue-App/blob/main/screenshots/cover.jpg" alt="MyUnfollowers">
 
-# 🕵️ My Unfollowers App [![GitHub](https://img.shields.io/github/license/rawheel/My-Unfollowers-Vue-App?color=blue)](https://github.com/rawheel/My-Unfollowers-Vue-App/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/rawheel/My-Unfollowers-Vue-App)](https://github.com/rawheel/My-Unfollowers-Vue-App/stargazers)
+# 🕵️ My Unfollowers App [![GitHub](https://img.shields.io/github/license/rawheel/my-unfollowers-app?color=blue)](https://img.shields.io/github/license/rawheel/my-unfollowers-app) [![GitHub stars](https://img.shields.io/github/stars/rawheel/My-Unfollowers-App)](https://github.com/rawheel/My-Unfollowers-App/stargazers)
 
 ## An App which keeps record who follows, unfollows you on GitHub.
 The app is developed using Flask(Python micro framework) and Vuejs the coolest & lightest javascript framework for front End. Backend API using GitHub official API to get the user's data and saving it to database. By analyzing, comparing the followers of the particular user the Backend FLASK Restful API through the results. 
