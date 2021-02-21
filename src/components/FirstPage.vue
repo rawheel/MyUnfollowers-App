@@ -2,8 +2,11 @@
     
     <div class = "first-container">
         <div><p>Lets raid who unfollows you!</p></div>
-        <input v-model="getusername" type="username" class="form-control" id="inputusername" placeholder="@username">
-        <button type="button" class="btn btn-dark" @click="emitUsername" @keyup.enter="emitUsername">Go</button>
+        <input  v-model="getusername" type="username" @keyup.enter="emitUsername" id="inputusername" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="@username">
+        <button type="button" class="btn btn-dark" @click="emitUsername" >
+            
+            Go
+            </button>
     </div>
 </template>
 <script>
@@ -52,7 +55,7 @@ input{
 
 button{
     
-   font-size: 9px;
+   font-size: 0.5rem;
    border-radius: 20px;
 }
 .bottom:hover{
