@@ -3,27 +3,27 @@
     <div class="row">
     <div class="column">
       <div>
-        <p style="font-size:7px">TOTAL FOLLOWERS</p>
+        <p style="font-size:0.5rem">TOTAL FOLLOWERS</p>
         <h5 style="padding:0">{{ this.apiData.totalfollowers }}</h5>
       </div>
     </div>
     <div class="column">
-        <p style="font-size:7px">TOTAL NEWFOLLOWERS</p>
+        <p style="font-size:0.5rem">TOTAL NEWFOLLOWERS</p>
         <h5>{{ this.apiData.totalnewfollowers }}</h5>
 
     </div>
 
     <div class="column">
         
-        <p style="font-size:7px">TOTAL UNFOLLOWERS</p>
+        <p style="font-size:0.5rem">TOTAL UNFOLLOWERS</p>
         <h5>{{ this.apiData.totalunfollowers }}</h5 >
     </div>
     </div>
-           <div>
-           <div class="table-wrapper-scroll-y my-custom-scrollbar">
-            <b-table table :items="finalFollowers" style="font-size:6px;"></b-table>
-            </div>
-        </div>
+      <div>
+        
+            <b-table table :items="finalFollowers" style="font-size:0.5rem;"></b-table>
+        
+      </div>
   </div>
 </template>
 
@@ -89,7 +89,7 @@ export default {
 
 }
 h5{
-  font-size:9px;
+  font-size:0.5rem;
 }
 
 /* Clear floats after the columns */
