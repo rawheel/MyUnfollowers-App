@@ -2,8 +2,8 @@
     
     <div class = "first-container">
         <div><p>Lets raid who unfollows you!</p></div>
-        <input v-model="getusername" type="username" class="form-control" id="inputusername" placeholder="@username">
-        <button type="button" class="btn btn-dark" @click="emitUsername" @keyup.enter="emitUsername">Go</button>
+        <input v-model="getusername" type="username" class="form-control" @keyup.enter="emitUsername" id="inputusername" placeholder="@username">
+        <button type="button" class="btn btn-dark" @click="emitUsername" >Go</button>
     </div>
 </template>
 <script>
