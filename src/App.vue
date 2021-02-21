@@ -2,10 +2,12 @@
   <div id="app" class = 'bg-white w-full h-screen font-sans md:font-serif md:justify-self-center'>
     
     <div>
-      <nav class="navbar navbar-dark bg-dark" style="width:100%;margin:0;padding:0">
-        <button class="nav-link" @click="home" style="color:white;background-color:#343A40;border:none">Home </button>
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <button class="nav-link" @click="home" style="color:white;border:none">Home </button>
       </nav>
     </div>
+
+    <div class="grid justify-items-center">
     <div class="question-box-container">
     <div class="name-head" >
       <h1 style="font-size:2rem">MyUnfollowers</h1>
@@ -13,13 +15,13 @@
     
     
     </div>
-    <div class="bg-gray-100 shadow-md rounded md:rounded-full pt-6 pb-8 mb-4 flex flex-col my-2" style="padding:30px">
+    <div class="bg-gray-100 shadow-md rounded md:rounded-full pt-6 pb-8 mb-4 flex flex-col my-2">
     
       <div class = "github-img">
           <img id="github" :src="avatar">
       </div>
       <h4><a :href="gitURL" style="color:#343A40;font-size:1rem" target="_blank">{{ gitUsername }}</a></h4>
-      <div class="md:justify-self-center ...">
+      <div style="padding-right:30px;padding-left:30px">
         <hr>
       </div>
         <div class = "pages" >
@@ -52,7 +54,7 @@
     </div>
     </div>
   
-    
+    </div>
   </div>
 </template>
 
@@ -164,17 +166,12 @@ export default {
 .question-box-container{
   display: inline-block;
   text-align: center;
-  margin-left:25%;
-  margin-right: 25%;
+  
   
 }
 h4{
   margin-top:2px;
-
   font-style:italic;
-  
- 
-  
 }
 .name-head{
   
