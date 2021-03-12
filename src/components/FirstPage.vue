@@ -3,12 +3,12 @@
     <div class = "first-container">
         <div><p>Lets raid who unfollows you!</p></div>
         <input  v-model="getusername" type="username" @keyup.enter="emitUsername" id="inputusername" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="@username">
-        <button type="button" class="btn btn-dark" @click="emitUsername" >
-            
+        <button type="button"  class="transition duration-500 ease-in-out bg-gray-900 text-white hover:bg-gray-400 transform hover:-translate-y-1 hover:scale-110 ..." @click="emitUsername" >
+
             Go
             </button>
     </div>
-</template>
+</template>s
 <script>
 export default {
     data(){
@@ -56,6 +56,8 @@ input{
 button{
     
    font-size: 0.5rem;
+   width:30px;
+   height:20px;
    border-radius: 20px;
 }
 .bottom:hover{

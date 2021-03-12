@@ -1,0 +1,4 @@
+[0m2021.03.13 03:02:35 INFO  Started: Metals version 0.10.0 in workspace 'G:\vue learning\My-Unfollowers-Vue-App' for client vscode 1.54.1.[0m
+[0m2021.03.13 03:02:36 INFO  time: initialize in 1.02s[0m
+[0m2021.03.13 03:02:38 WARN  Build server is not auto-connectable.[0m
+[0m2021.03.13 03:02:38 WARN  no build tool detected in workspace 'G:\vue learning\My-Unfollowers-Vue-App'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
