@@ -32,6 +32,8 @@
             />
           </div>
 
+        
+
           <div v-else-if="isMain">
             <MainPage
             :avatarchange="avatarchange"
@@ -39,6 +41,7 @@
 
             />
           </div>
+
           <div v-else>
             <Registered
             :registeredMessage="registeredMessage"
@@ -62,12 +65,14 @@
 import FirstPage from './components/FirstPage.vue'
 import MainPage from './components/MainPage.vue'
 import Registered from './components/Registered.vue'
+
 export default {
   name: 'MyUnfollowers',
   components: {
     FirstPage,
     MainPage,
-    Registered
+    Registered,
+
   },
   
   data(){
@@ -76,6 +81,7 @@ export default {
     gitURL:'',
     isFirst: true,
     isMain:false,
+    
     registeredMessage:'',
     apiData:{},
     newuser:false,

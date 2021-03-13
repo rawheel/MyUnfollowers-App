@@ -5,7 +5,9 @@ module.exports = {
     container:{
       center: true,
     },
-    extend: {},
+    extend: {
+      alignContent: ['hover', 'focus'],
+    },
   },
   variants: {
     animation: ['responsive', 'motion-safe', 'motion-reduce'],

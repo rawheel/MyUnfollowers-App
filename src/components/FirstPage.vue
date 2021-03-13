@@ -1,19 +1,32 @@
 <template>
+
     
     <div class = "first-container">
-        <div><p>Lets raid who unfollows you!</p></div>
-        <input  v-model="getusername" type="username" @keyup.enter="emitUsername" id="inputusername" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="@username">
-        <button type="button"  class="transition duration-500 ease-in-out bg-gray-900 text-white hover:bg-gray-400 transform hover:-translate-y-1 hover:scale-110 ..." @click="emitUsername" >
 
-            Go
+        <div v-if="notloading">
+            <div><p>Lets raid who unfollows you!</p></div>
+            <input  v-model="getusername" type="username" @keyup.enter="emitUsername" id="inputusername" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md" placeholder="@username">
+            <button type="button"  class="transition duration-500 ease-in-out bg-gray-900 text-white hover:bg-gray-400 transform hover:-translate-y-1 hover:scale-110 ..." @click="emitUsername" >
+
+                Go
             </button>
+        </div>
+        <div v-else>
+            <Animation/>
+        </div>
     </div>
-</template>s
+</template>
 <script>
+import Animation from '@/components/Animation.vue'
 export default {
+    name:'first page',
+    components: {
+    Animation
+  },
     data(){
         return {
-            getusername:''
+            getusername:'',
+            notloading:true
         }
     },
     props:{
@@ -22,7 +35,7 @@ export default {
     },
     methods:{
         emitUsername(){
-            
+            this.notloading=false
             this.changePagetofirst(this.getusername)
         }
     }
