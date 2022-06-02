@@ -3,7 +3,7 @@
 # 🕵️ My Unfollowers App [![GitHub](https://img.shields.io/github/license/rawheel/my-unfollowers-app?color=blue)](https://img.shields.io/github/license/rawheel/my-unfollowers-app) [![GitHub stars](https://img.shields.io/github/stars/rawheel/My-Unfollowers-App)](https://github.com/rawheel/My-Unfollowers-App/stargazers)
 
 ## 🚀 A platform to inspect GitHub's followers/unfollowers with visualizations and stats.
-The app is developed using Flask(Python micro framework) and Vuejs the coolest & lightest javascript framework for front End. Backend API using GitHub official API to get the user's data and saving it to database. By analyzing, comparing the followers of the particular user the Backend FLASK Restful API through the results. 
+The app is developed using Flask(Python micro framework) and Vuejs the coolest & lightest javascript framework for front End. [Backend API](https://github.com/rawheel/MyUnfollowersApi-GitHub) uses GitHub official API to get the user's data and saves it to database. It analyzes the data to generate the insights about GitHub followers and unfollowers. 
 #### check the [Live Demo](https://myunfollowers.herokuapp.com/) 👨‍💻
 
 ## ⚙️ USAGE
