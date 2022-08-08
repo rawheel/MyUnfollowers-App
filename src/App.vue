@@ -10,7 +10,7 @@
     <div class="grid justify-items-center">
     <div class="question-box-container">
     <div class="name-head" >
-      <h1 style="font-size:2rem">MyUnfollowers</h1>
+      <h1 style="font-size:2rem">My Unfollowers</h1>
       <p><a href="https://github.com/rawheel" style="color:black;font-size:0.7rem" target="_blank">by Raheel Siddiqui</a></p>
     
     
