@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class = 'bg-white w-full h-screen font-sans md:font-serif md:justify-self-center'>
+  <div id="app" class = 'bg-gray-800 w-full h-screen  md:justify-self-center'>
     
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
@@ -9,22 +9,22 @@
 
     <div class="grid justify-items-center">
     <div class="question-box-container">
-    <div class="name-head" >
-      <h1 style="font-size:2rem">MyUnfollowers</h1>
-      <p><a href="https://github.com/rawheel" style="color:black;font-size:0.7rem" target="_blank">by Raheel Siddiqui</a></p>
+    <div class="text-white" >
+      <h1 class="mt-4 text-4xl">My Unfollowers</h1>
+      <p ><a class="text-green-400" href="https://github.com/rawheel" target="_blank">by Raheel Siddiqui</a></p>
     
     
     </div>
-    <div class="bg-gray-100 shadow-md rounded md:rounded-full pt-6 pb-8 mb-4 flex flex-col my-2">
+    <div class="bg-gray-900 shadow-md rounded md:rounded-full pt-6 pb-8 mb-4 flex flex-col my-2">
     
       <div class = "github-img">
           <img id="github" :src="avatar">
       </div>
       <h4><a :href="gitURL" style="color:#343A40;font-size:1rem" target="_blank">{{ gitUsername }}</a></h4>
-      <div style="padding-right:30px;padding-left:30px">
-        <hr>
-      </div>
-        <div class = "pages" >
+      
+        <hr class="bg-gray-400 mx-4">
+    
+        <div class = "mt-2" >
 
           <div v-if="isFirst">
             <FirstPage
@@ -187,9 +187,7 @@ h4{
   color:#707070,
   
 }
-#app{
-  font-family: 'Segoe UI';
-}
+
 
 .github-img img{
 
@@ -202,8 +200,6 @@ h4{
     
 }
 
-.pages{
-  margin-top:5%
-}
+
 
 </style>
