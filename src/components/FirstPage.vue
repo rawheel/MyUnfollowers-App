@@ -1,12 +1,7 @@
 <template>
-  <div class="first-container">
-    <div v-if="notloading">
-      <div><p>Lets raid who unfollows you!</p></div>
-
-    
     <div >
 
-        <div class="flex w-full flex-col" v-if="notloading">
+        <div class="flex w-full flex-col" >
             <div class="text-white"><p>🚀 Inspect GitHub's followers/unfollowers with visualizations and stats.</p></div>
            
                 <!-- <input  v-model="getusername" type="username" @keyup.enter="emitUsername" id="inputusername" 
@@ -16,7 +11,12 @@
             placeholder="@username"> -->
             <div class="flex justify-center">
             <div>
-            <vs-input @keyup.enter="emitUsername" v-model="getusername" placeholder="username">
+            <vs-input
+            color="#7d33ff"
+            gradient
+             @keyup.enter="emitUsername" 
+             v-model="getusername" 
+             placeholder="username">
 
                 
                 <template  v-if="!getusername" #message-danger>
@@ -41,10 +41,9 @@
             <vs-button
            
                 circle
-                class=""
-                color="rgb(59,222,200)"
+                :loading= "!notloading"
+                color="#7d33ff"
                 gradient
-                :active="active == 1"
                 @click="emitUsername"
             >
                 Go
@@ -53,19 +52,14 @@
          
             </div>
         </div>
-        <div v-else>
-            <Animation/>
-        </div>
     </div>
-  </div>
+  
 </template>
 <script>
-import Animation from "@/components/Animation.vue";
+
 export default {
   name: "first page",
-  components: {
-    Animation,
-  },
+
   data() {
     return {
       getusername: "",
