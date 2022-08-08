@@ -9,6 +9,11 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-brands-svg-icons": "^6.1.2",
+    "@fortawesome/free-regular-svg-icons": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/vue-fontawesome": "^2.0.8",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
@@ -16,7 +21,8 @@
     "express": "^4.17.1",
     "serve-static": "^1.14.1",
     "vue": "^2.6.11",
-    "vue-axios": "^3.2.4"
+    "vue-axios": "^3.2.4",
+    "vuesax": "^4.0.1-alpha.25"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.3",
