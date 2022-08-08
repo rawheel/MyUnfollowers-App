@@ -1,4 +1,7 @@
 <template>
+  <div class="first-container">
+    <div v-if="notloading">
+      <div><p>Lets raid who unfollows you!</p></div>
 
     
     <div >
@@ -54,42 +57,54 @@
             <Animation/>
         </div>
     </div>
+  </div>
 </template>
 <script>
-import Animation from '@/components/Animation.vue'
+import Animation from "@/components/Animation.vue";
 export default {
-    name:'first page',
-    components: {
-    Animation
+  name: "first page",
+  components: {
+    Animation,
   },
-    data(){
-        return {
-            getusername:'',
-            notloading:true
-        }
-    },
-    props:{
-      
-        changePagetofirst: Function
-    },
-    methods:{
-        emitUsername(){
-            this.notloading=false
-            this.changePagetofirst(this.getusername)
-        }
-    }
+  data() {
+    return {
+      getusername: "",
+      notloading: true,
+    };
+  },
+  props: {
+    changePagetofirst: Function,
+  },
+  methods: {
+    emitUsername() {
+      this.notloading = false;
+      this.changePagetofirst(this.getusername);
 
-}
+      if (this.getusername == "" || this.getusername == null) {
+        this.toast("danger");
+        this.notloading = true;
+      }
+    },
+
+    toast(variant = null) {
+      this.$bvToast.toast(`The username cannot be empty!`, {
+        title: `There was a Problem`,
+        variant: variant,
+        solid: true,
+        autoHideDelay: 5000,
+      });
+    },
+  },
+};
 </script>
 <style scoped>
-.first-container{
-    
+.first-container {
   display: inline-block;
   text-align: center;
   font-size: 12;
 }
-p{
-    font-style: italic;
+p {
+  font-style: italic;
 }
 
 /* button{
@@ -105,8 +120,8 @@ label{
     margin-bottom: 0 !important;
     margin: 0 !important;
 }
-.bottom:hover{
-    background-color: grey;
+.bottom:hover {
+  background-color: grey;
 }
 
 .vs-input {
