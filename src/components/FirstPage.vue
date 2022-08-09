@@ -3,12 +3,7 @@
 
         <div class="flex w-full flex-col" >
             <div class="text-white"><p>🚀 Inspect GitHub's followers/unfollowers with visualizations and stats.</p></div>
-           
-                <!-- <input  v-model="getusername" type="username" @keyup.enter="emitUsername" id="inputusername" 
-            
-            class="focus:ring-indigo-500 focus:border-indigo-500   text-lg rounded-md" 
-            
-            placeholder="@username"> -->
+
             <div class="flex justify-center">
             <div>
             <vs-input
@@ -32,11 +27,6 @@
              </vs-input>
              </div>
             
-        
-           
-            <!-- <button type="button"  class="transition duration-500 ease-in-out bg-green-400 text-white hover:bg-gray-400 transform hover:-translate-y-1 hover:scale-110 " @click="emitUsername" >
-                Go
-            </button> -->
             <div>
             <vs-button
            

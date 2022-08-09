@@ -1,27 +1,27 @@
 <template>
-<div class = "main-div" >
-    <div class="row">
-    <div class="column">
+<div class = "flex text-gray-400" >
+    <div class="flex w-full justify-between px-4">
+    <div >
       <div>
-        <p style="font-size:0.5rem">TOTAL FOLLOWERS</p>
-        <h5 style="padding:0">{{ this.apiData.totalfollowers }}</h5>
+        <p class="text-xs">FOLLOWERS</p>
+        <p style="padding:0">{{ this.apiData.totalfollowers }}</p>
       </div>
     </div>
     <div class="column">
-        <p style="font-size:0.5rem">TOTAL NEWFOLLOWERS</p>
-        <h5>{{ this.apiData.totalnewfollowers }}</h5>
+        <p class="text-xs">NEWFOLLOWERS</p>
+        <p>{{ this.apiData.totalnewfollowers }}</p>
 
     </div>
 
     <div class="column">
         
-        <p style="font-size:0.5rem">TOTAL UNFOLLOWERS</p>
-        <h5>{{ this.apiData.totalunfollowers }}</h5 >
+        <p class="text-xs">UNFOLLOWERS</p>
+        <p>{{ this.apiData.totalunfollowers }}</p >
     </div>
     </div>
       <div>
         
-            <b-table table :items="finalFollowers" style="font-size:0.5rem;"></b-table>
+            <b-table table :items="finalFollowers" class="text-sm text-gray-400"></b-table>
         
       </div>
   </div>
@@ -77,7 +77,7 @@ export default {
 
 <style scoped>
 
-.column{
+/* .column{
   padding:0;
   margin:0;
   float: left;
@@ -87,19 +87,19 @@ export default {
   padding-left:10px;
   padding-right:10px;
 
-}
+} */
 h5{
   font-size:0.5rem;
 }
 
 /* Clear floats after the columns */
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   margin:0;
   padding:0;
   clear: both;
-}
+} */
 .b-table{
   border:none
 }

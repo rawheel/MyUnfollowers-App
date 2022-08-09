@@ -1,5 +1,5 @@
 <template>
-    <p>{{ registeredMessage }}</p>
+    <p class="text-gray-400 md:text-base text-sm px-12">{{ registeredMessage }}</p>
 </template>
 <script>
 export default {
@@ -9,9 +9,3 @@ export default {
 }
 </script>
 
-<style scoped>
-p{
-    font-size:10px;
-    font-style: italic;
-}
-</style>

@@ -20,7 +20,7 @@
       <div class = "github-img">
           <img id="github" :src="avatar">
       </div>
-      <h4><a :href="gitURL" style="color:#343A40;font-size:1rem" target="_blank">{{ gitUsername }}</a></h4>
+      <h4><a :href="gitURL" class="text-2xl   text-white" target="_blank">{{ gitUsername }}</a></h4>
       
         <hr class="bg-gray-400 mx-4">
     
