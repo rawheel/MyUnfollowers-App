@@ -24,7 +24,7 @@
       
         <hr class="bg-gray-400 mx-4">
     
-        <div class = "mt-2" >
+        <div >
 
           <div v-if="isFirst">
             <FirstPage

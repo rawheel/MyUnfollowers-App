@@ -2,9 +2,9 @@
     <div >
 
         <div class="flex w-full flex-col" >
-            <div class="text-white"><p>🚀 Inspect GitHub's followers/unfollowers with visualizations and stats.</p></div>
+            <div class="text-white">🚀 Inspect GitHub's followers/unfollowers with visualizations and stats.</div>
 
-            <div class="flex justify-center">
+            <div class="flex justify-center mt-4">
             <div>
             <vs-input
             color="#7d33ff"
