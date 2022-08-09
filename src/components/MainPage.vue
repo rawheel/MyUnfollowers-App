@@ -1,6 +1,6 @@
 <template>
-<div class = "flex text-gray-400" >
-    <div class="flex w-full justify-between px-4">
+<div class = "flex flex-col text-gray-400" >
+    <div class="flex space-x-2 w-full justify-between px-4">
     <div >
       <div>
         <p class="text-xs">FOLLOWERS</p>
@@ -21,7 +21,7 @@
     </div>
       <div>
         
-            <b-table table :items="finalFollowers" class="text-sm text-gray-400"></b-table>
+            <b-table table :items="finalFollowers" class="text-sm text-white"></b-table>
         
       </div>
   </div>
