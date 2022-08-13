@@ -1,19 +1,18 @@
 <template>
 <div class = "flex flex-col text-gray-400" >
     <div class="flex space-x-2 w-full justify-between px-4">
-    <div >
-      <div>
+    <div class="grid justify-items-center" >
+
         <p class="text-xs">FOLLOWERS</p>
         <p style="padding:0">{{ this.apiData.totalfollowers }}</p>
-      </div>
     </div>
-    <div class="column">
+    <div class="grid justify-items-center">
         <p class="text-xs">NEWFOLLOWERS</p>
         <p>{{ this.apiData.totalnewfollowers }}</p>
 
     </div>
 
-    <div class="column">
+    <div class="grid justify-items-center">
         
         <p class="text-xs">UNFOLLOWERS</p>
         <p>{{ this.apiData.totalunfollowers }}</p >

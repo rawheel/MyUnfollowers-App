@@ -7,22 +7,22 @@
       </nav>
     </div>
 
-    <div class="grid justify-items-center">
-    <div class="question-box-container">
-    <div class="text-white" >
-      <h1 class="mt-4 text-4xl">My Unfollowers</h1>
-      <p ><a class="text-green-400" href="https://github.com/rawheel" target="_blank">by Raheel Siddiqui</a></p>
+    <div class="flex justify-center w-full">
+    <div >
+    <div class="text-white grid justify-items-center w-full " >
+      <div class="mt-4 text-4xl">My Unfollowers</div>
+      <div ><a class="text-green-400" href="https://github.com/rawheel" target="_blank">by Raheel Siddiqui</a></div>
     
     
     </div>
-    <div class="bg-gray-900 shadow-md rounded md:rounded-full pt-6 pb-8 mb-4 flex flex-col my-2">
+    <div class="bg-gray-900 md:mx-0 mx-4 shadow-md rounded md:rounded-full pt-6 pb-8 mb-4 flex flex-col my-2">
     
-      <div class = "github-img">
+      <div class = "github-img flex justify-center w-full">
           <img id="github" :src="avatar">
       </div>
-      <h4><a :href="gitURL" class="text-2xl   text-white" target="_blank">{{ gitUsername }}</a></h4>
+      <div class="flex justify-center w-full mt-2"><a :href="gitURL" class="text-2xl   text-white" target="_blank">{{ gitUsername }}</a></div>
       
-        <hr class="bg-gray-400 mx-4">
+        <hr class="bg-gray-400 mx-4 my-4">
     
         <div >
 

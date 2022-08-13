@@ -1,8 +1,8 @@
 <template>
     <div >
 
-        <div class="flex w-full flex-col" >
-            <div class="text-white">🚀 Inspect GitHub's followers/unfollowers with visualizations and stats.</div>
+        <div class="grid w-full justify-items-center" >
+            <div class="md:text-sm mx-10 text-center text-white text-xs ">🚀 Inspect GitHub's followers/unfollowers with visualizations and stats.</div>
 
             <div class="flex justify-center mt-4">
             <div>
