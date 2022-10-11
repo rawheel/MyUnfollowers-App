@@ -46,20 +46,6 @@ export default {
         //   { Newfollowers: 'waleed01', Unfollowers: 'osama12'  },
         //   { Newfollowers: 'shahzaibawan12' ,Unfollowers: 'osama12'},
         //   { Newfollowers: 'iqra45' ,Unfollowers: 'rawheel' },
-        //   { Newfollowers: 'wajahtkarim4' },
-        //   { Newfollowers: 'waleed01', Unfollowers: 'osama12'  },
-        //   { Newfollowers: 'shahzaibawan12' ,Unfollowers: 'osama12'},
-        //   { Newfollowers: 'iqra45' ,Unfollowers: 'rawheel' },
-        //   { Newfollowers: 'wajahtkarim4' },
-        //   { Newfollowers: 'waleed01', Unfollowers: 'osama12'  },
-        //   { Newfollowers: 'shahzaibawan12' ,Unfollowers: 'osama12'},
-        //   { Newfollowers: 'iqra45' ,Unfollowers: 'rawheel' },
-        //   { Newfollowers: 'wajahtkarim4' },
-        //   { Newfollowers: 'waleed01', Unfollowers: 'osama12'  },
-        //   { Newfollowers: 'shahzaibawan12' ,Unfollowers: 'osama12'},
-        //   { Newfollowers: 'iqra45' ,Unfollowers: 'rawheel' },
-        //   { Newfollowers: 'wajahtkarim4' },
-          
         // ]
       }
 
