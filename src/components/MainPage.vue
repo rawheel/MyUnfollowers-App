@@ -1,5 +1,5 @@
 <template>
-<div class = "flex flex-col text-gray-400" >
+<div class = "flex flex-col text-gray-400 w-4/5" >
     <div class="flex space-x-2 w-full justify-between px-4">
     <div class="grid justify-items-center" >
 
@@ -18,16 +18,20 @@
         <p>{{ this.apiData.totalunfollowers }}</p >
     </div>
     </div>
-      <div>
-        
-            <b-table table :items="finalFollowers" class="text-sm text-white"></b-table>
+      <div class="md:px-4">
+
+            <Table :data="finalFollowers"/>
         
       </div>
   </div>
 </template>
 
 <script>
+import Table from '@/components/Table.vue'
 export default {
+  components:{
+        Table
+        },
     props:{
         apiData:Object,
         avatarchange: Function
@@ -38,13 +42,25 @@ export default {
         finalFollowers:[],
 
         //Structure Example of Provided data
-        /*items: [
-          { Newfollowers: 'waleed01', Unfollowers: 'osama12'  },
-          { Newfollowers: 'shahzaibawan12' ,Unfollowers: 'osama12'},
-          { Newfollowers: 'iqra45' ,Unfollowers: 'rawheel' },
-          { Newfollowers: 'wajahtkarim4' },
+        // items: [
+        //   { Newfollowers: 'waleed01', Unfollowers: 'osama12'  },
+        //   { Newfollowers: 'shahzaibawan12' ,Unfollowers: 'osama12'},
+        //   { Newfollowers: 'iqra45' ,Unfollowers: 'rawheel' },
+        //   { Newfollowers: 'wajahtkarim4' },
+        //   { Newfollowers: 'waleed01', Unfollowers: 'osama12'  },
+        //   { Newfollowers: 'shahzaibawan12' ,Unfollowers: 'osama12'},
+        //   { Newfollowers: 'iqra45' ,Unfollowers: 'rawheel' },
+        //   { Newfollowers: 'wajahtkarim4' },
+        //   { Newfollowers: 'waleed01', Unfollowers: 'osama12'  },
+        //   { Newfollowers: 'shahzaibawan12' ,Unfollowers: 'osama12'},
+        //   { Newfollowers: 'iqra45' ,Unfollowers: 'rawheel' },
+        //   { Newfollowers: 'wajahtkarim4' },
+        //   { Newfollowers: 'waleed01', Unfollowers: 'osama12'  },
+        //   { Newfollowers: 'shahzaibawan12' ,Unfollowers: 'osama12'},
+        //   { Newfollowers: 'iqra45' ,Unfollowers: 'rawheel' },
+        //   { Newfollowers: 'wajahtkarim4' },
           
-        ]*/
+        // ]
       }
 
     },

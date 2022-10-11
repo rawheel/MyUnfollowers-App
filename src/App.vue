@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class = 'bg-gray-800 w-full h-screen  md:justify-self-center'>
+  <div  class = 'absolute overflow-hidden bg-gray-800 w-full h-full top-0 right-0 left-0 bottom-0 md:justify-self-center'>
     
     <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
@@ -7,7 +7,7 @@
       </nav>
     </div>
 
-    <div class="flex justify-center w-full">
+    <div class="flex justify-center w-full h-full">
     <div >
     <div class="text-white grid justify-items-center w-full " >
       <div class="mt-4 text-4xl">My Unfollowers</div>
@@ -15,12 +15,12 @@
     
     
     </div>
-    <div class="bg-gray-900 md:mx-0 mx-4 shadow-md rounded md:rounded-full pt-6 pb-8 mb-4 flex flex-col my-2">
+    <div class="bg-gray-900 md:mx-0 mx-4 shadow-md rounded md:rounded-full pt-6 pb-8 mb-4 flex flex-col my-2 ">
     
-      <div class = "github-img flex justify-center w-full">
+      <div class = "github-img flex justify-center w-full h-full">
           <img id="github" :src="avatar">
       </div>
-      <div class="flex justify-center w-full mt-2"><a :href="gitURL" class="text-2xl   text-white" target="_blank">{{ gitUsername }}</a></div>
+      <div class="flex justify-center w-full h-full mt-2"><a :href="gitURL" class="text-2xl   text-white" target="_blank">{{ gitUsername }}</a></div>
       
         <hr class="bg-gray-400 mx-4 my-4">
     
@@ -34,7 +34,7 @@
 
         
 
-          <div v-else-if="isMain">
+          <div v-else-if="isMain" class="flex justify-center">
             <MainPage
             :avatarchange="avatarchange"
             :apiData="apiData"
