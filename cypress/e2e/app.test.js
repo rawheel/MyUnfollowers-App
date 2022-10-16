@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
-context("Create Tasks Module", { tags: ["run"] }, () => {
-  context("Check Project", () => {
-    it("Open and Check Project", () => {
+context("Check UnFollowers Module", { tags: ["run"] }, () => {
+  context("Check UnFollowers", () => {
+    it("Open and Check UnFollowers", () => {
       cy.visit("localhost:8080");
 
       cy.get("#vs-input--5").click();
