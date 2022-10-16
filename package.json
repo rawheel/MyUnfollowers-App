@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "node server.js"
+    "start": "node server.js",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --config-file=cypress.config.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
@@ -31,6 +33,10 @@
     "@vue/cli-service": "~4.5.0",
     "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
+    "cypress": "^10.10.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-grep": "^3.0.3",
+    "cypress-localstorage-commands": "^2.2.1",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "postcss": "^7.0.35",
